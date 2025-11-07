@@ -19,11 +19,8 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Show repo structure
-        run: ls -R
-
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore MyApp/MyApp.csproj
 
       - name: Build code
-        run: dotnet build --configuration Release
+        run: dotnet build MyApp/MyApp.csproj --configuration Release
