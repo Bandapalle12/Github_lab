@@ -19,8 +19,11 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
+      - name: Show repo structure
+        run: ls -R
+
       - name: Restore dependencies
-        run: dotnet restore MySolution.sln
+        run: dotnet restore
 
       - name: Build code
-        run: dotnet build MySolution.sln --configuration Release
+        run: dotnet build --configuration Release
