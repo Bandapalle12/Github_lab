@@ -1,0 +1,14 @@
+jobs:
+  build:
+  runs-on: ubuntu-latest
+  steps:
+   - name: Checkout code
+    uses: actions/checkout@v4.1.7
+
+   - name: Set up .NET Core
+    uses: actions/setup-dotnet@v4.0.1
+    with:
+     dotnet-version: '8.x'
+
+   - name: Build code
+    run: dotnet build --configuration Release

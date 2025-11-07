@@ -1,0 +1,7 @@
+name: ASP.NET Web API Build
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/aspnet-webapi-build.yml'
+      - 'src/dotnet/Weather.WebApi/**'
