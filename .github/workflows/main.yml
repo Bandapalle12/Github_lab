@@ -19,8 +19,9 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Restore dependencies
-        run: dotnet restore src/MyApp/MyApp.csproj
+- name: Restore dependencies
+  run: dotnet restore MySolution.sln
 
-      - name: Build code
-        run: dotnet build src/MyApp/MyApp.csproj --configuration Release
+- name: Build code
+  run: dotnet build MySolution.sln --configuration Release
+
