@@ -5,3 +5,12 @@ on:
   push:
     paths:
       - '.github/workflows/scheduled.yml'
+
+      jobs:
+  execute:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display current date and time
+        run: echo "The current date and time is $(date)"
+
