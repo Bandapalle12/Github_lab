@@ -17,6 +17,4 @@ jobs:
       - name: List repo files
         run: ls -R .
 
-      - name: Build ASP.NET Weather Web API
-        run: dotnet build
-        working-directory: ./src/dotnet/Weather.WebApi
+   
